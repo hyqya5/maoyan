@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <router-link to="/HomeBar/children/TraiLer">预告片</router-link>
+  </div>
 </template>
 
 <script>

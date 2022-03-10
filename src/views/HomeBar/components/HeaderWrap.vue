@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header-wrap">
     <header>
       <a href="javascript:;">中牟</a>
       <search-bar :placeholder="hotSearchWord" to="/search"/>
@@ -23,6 +23,19 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.header-wrap{
+  header{
+    display: flex;
+    padding:10px;
+    justify-content: space-between;
+    align-items: center;
+    a{
+      font-size: 12px;
+      text-decoration: none;
+      flex-shrink:0 ;
+      color: #333;
+    }
+  }
+}
 </style>

@@ -21,8 +21,23 @@ const routes = [
           },
           {
             path: '/HomeBar/children/SayMovie',
-            name: 'recommend',
+            name: 'sayMovie',
             component: () => import('@/views/HomeBar/children/SayMovie')
+          },
+          {
+            path: '/HomeBar/children/HotFilm',
+            name: 'hotFilm',
+            component: () => import('@/views/HomeBar/children/HotFilm')
+          },
+          {
+            path: '/HomeBar/children/DramaSynthesis',
+            name: 'dramaSynthesis',
+            component: () => import('@/views/HomeBar/children/DramaSynthesis')
+          },
+          {
+            path: '/HomeBar/children/TraiLer',
+            name: 'traiLer',
+            component: () => import('@/views/HomeBar/children/TraiLer')
           }
         ]
       },

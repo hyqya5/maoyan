@@ -1,5 +1,7 @@
 <template>
-  <div>剧综</div>
+  <div>
+    <router-link to="/HomeBar/children/DramaSynthesis">剧综</router-link>
+  </div>
 </template>
 
 <script>
