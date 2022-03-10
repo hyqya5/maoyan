@@ -1,11 +1,10 @@
 <template>
-  <div>
-  </div>
+  <div>剧综</div>
 </template>
 
 <script>
 export default {
-  name: 'min-ea'
+  name: 'drama-synthesis'
 }
 </script>
 

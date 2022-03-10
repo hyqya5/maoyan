@@ -1,11 +1,10 @@
 <template>
-  <div>
-  </div>
+  <div></div>
 </template>
 
 <script>
 export default {
-  name: 'min-ea'
+  name: 'hot-film'
 }
 </script>
 

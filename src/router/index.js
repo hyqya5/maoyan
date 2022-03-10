@@ -12,7 +12,19 @@ const routes = [
       {
         path: '/HomeBar',
         name: 'home',
-        component: () => import('@/views/HomeBar')
+        component: () => import('@/views/HomeBar'),
+        children: [
+          {
+            path: '/HomeBar/children/RecEnd',
+            name: 'recommend',
+            component: () => import('@/views/HomeBar/children/RecEnd')
+          },
+          {
+            path: '/HomeBar/children/SayMovie',
+            name: 'recommend',
+            component: () => import('@/views/HomeBar/children/SayMovie')
+          }
+        ]
       },
       {
         path: '/MoveBar',
