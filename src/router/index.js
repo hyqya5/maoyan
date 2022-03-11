@@ -15,27 +15,27 @@ const routes = [
         component: () => import('@/views/HomeBar'),
         children: [
           {
-            path: '/HomeBar/children/RecEnd',
+            path: '/HomeBar/RecEnd',
             name: 'recommend',
             component: () => import('@/views/HomeBar/children/RecEnd')
           },
           {
-            path: '/HomeBar/children/SayMovie',
+            path: '/HomeBar/SayMovie',
             name: 'sayMovie',
             component: () => import('@/views/HomeBar/children/SayMovie')
           },
           {
-            path: '/HomeBar/children/HotFilm',
+            path: '/HomeBar/HotFilm',
             name: 'hotFilm',
             component: () => import('@/views/HomeBar/children/HotFilm')
           },
           {
-            path: '/HomeBar/children/DramaSynthesis',
+            path: '/HomeBar/DramaSynthesis',
             name: 'dramaSynthesis',
             component: () => import('@/views/HomeBar/children/DramaSynthesis')
           },
           {
-            path: '/HomeBar/children/TraiLer',
+            path: '/HomeBar/TraiLer',
             name: 'traiLer',
             component: () => import('@/views/HomeBar/children/TraiLer')
           }

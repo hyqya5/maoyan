@@ -1,7 +1,7 @@
 <template>
   <div>
-    <router-link to="/HomeBar/children/RecEnd" class="a1">推荐</router-link>
     <div>
+      <p></p>
     </div>
   </div>
 </template>
@@ -13,7 +13,4 @@ export default {
 </script>
 
 <style>
-.a1{
-    text-decoration: none;
-}
 </style>

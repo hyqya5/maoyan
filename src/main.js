@@ -6,9 +6,11 @@ import './assets/css/reset.css'
 import FooterBar from './components/FooterBar'
 import './assets/font/iconfont.css'
 import SearchBar from './components/SearchBar'
+import TabBar from './components/TabBar'
 Vue.config.productionTip = false
 Vue.component('FooterBar', FooterBar)
 Vue.component('SearchBar', SearchBar)
+Vue.component('TabBar', TabBar)
 new Vue({
   router,
   store,
