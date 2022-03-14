@@ -7,36 +7,33 @@ const routes = [
   {
     path: '/',
     name: 'tabs',
+    redirect: '/HomeBar',
     component: () => import('@/views/TabPage'),
     children: [
       {
         path: '/HomeBar',
         name: 'home',
+        redirect: '/HomeBar/RecEnd',
         component: () => import('@/views/HomeBar'),
         children: [
           {
             path: '/HomeBar/RecEnd',
-            name: 'recommend',
             component: () => import('@/views/HomeBar/children/RecEnd')
           },
           {
             path: '/HomeBar/SayMovie',
-            name: 'sayMovie',
             component: () => import('@/views/HomeBar/children/SayMovie')
           },
           {
             path: '/HomeBar/HotFilm',
-            name: 'hotFilm',
             component: () => import('@/views/HomeBar/children/HotFilm')
           },
           {
             path: '/HomeBar/DramaSynthesis',
-            name: 'dramaSynthesis',
             component: () => import('@/views/HomeBar/children/DramaSynthesis')
           },
           {
             path: '/HomeBar/TraiLer',
-            name: 'traiLer',
             component: () => import('@/views/HomeBar/children/TraiLer')
           }
         ]

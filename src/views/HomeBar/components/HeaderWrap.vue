@@ -21,23 +21,23 @@ export default {
       ],
       tabs: [
         {
-          path: '/HomeBar/children/RecEnd',
+          path: '/HomeBar/RecEnd',
           title: '推荐'
         },
         {
-          path: '/HomeBar/children/HotFilm',
+          path: '/HomeBar/HotFilm',
           title: '热片解读'
         },
         {
-          path: '/HomeBar/children/SayMovie',
+          path: '/HomeBar/SayMovie',
           title: '说电影'
         },
         {
-          path: '/HomeBar/children/TraiLer',
+          path: '/HomeBar/TraiLer',
           title: '预告片'
         },
         {
-          path: '/HomeBar/children/DramaSynthesis',
+          path: '/HomeBar/DramaSynthesis',
           title: '剧综'
         }
       ]

@@ -5,11 +5,10 @@
       <a
       v-for="(item, index) in tabs"
       :key="index"
-      :to="item.path"
       :class="{active: activeIndex === index}"
-      @click="change(index)"
+      @click="change(item, index)"
       href="javascript:;"
-      ref="navs"
+      ref="nave"
        >{{item.title}}</a>
       </template>
     </div>
@@ -21,7 +20,7 @@
 export default {
   name: 'tab-bar',
   props: {
-    tabs: Array,
+    tabs: [Array, Object],
     router: Boolean
   },
   data () {
@@ -29,9 +28,24 @@ export default {
       activeIndex: 0
     }
   },
+  mounted () {
+    this.setLineLeft()
+  },
   methods: {
-    change (index) {
+    change (item, index) {
+      if (this.router && this.$route.fullPath !== item.path) {
+        this.$router.push(item.path)
+      }
       this.activeIndex = index
+      this.$nextTick(() => {
+        this.setLineLeft()
+      })
+    },
+    setLineLeft () {
+      const activeNav = this.$refs.nave[this.activeIndex]
+      const width = activeNav.clientWidth
+      const left = activeNav.offsetLeft + width / 2 - 5
+      this.$refs.line.style.left = left + 'px'
     }
   }
 }
@@ -39,6 +53,7 @@ export default {
 <style lang="scss">
 .header-bar{
   position: relative;
+  margin-bottom: 15px;
   .header-menu{
   display: flex;
   justify-content: space-around;
@@ -48,6 +63,7 @@ export default {
     text-decoration: none;
     color: #666;
     font-size: 12px;
+    display: block;
     &.active{
       font-size: 20px;
       }
@@ -55,10 +71,12 @@ export default {
   }
   .line{
     position: absolute;
-    bottom: 0px;
+    bottom: -10px;
     width: 10px;
     height: 2px;
     background: #f03d37;
+    transition: all 0.5s ease;
+    display: block;
   }
 }
 </style>

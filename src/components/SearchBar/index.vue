@@ -45,7 +45,7 @@ export default {
     background: #eee;
     box-sizing: border-box;
     border-radius: 30px;
-    // overflow: hidden;
+    overflow: hidden;
     display: flex;
     align-items: center;
     .iconfont{
